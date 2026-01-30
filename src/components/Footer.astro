@@ -1,0 +1,37 @@
+<footer class="bg-gold pt-10 pb-4 text-charcoal text-sm">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+      <!-- About Section (Left aligned) -->
+      <div class="text-left">
+        <a href="/privacy/" class="underline mb-4 block">Privacy Policy</a>
+        <ul class="licenses-list space-y-1">
+          <li>MHIC License #04223586</li>
+          <li>Florida License #G19000122438</li>
+        </ul>
+      </div>
+
+      <!-- Contact Section (Right aligned on medium+) -->
+      <div class="md:text-right">
+        <ul class="contact-list space-y-1">
+          <li><a href="tel:4107339258" class="underline">(410) 733-9258</a></li>
+          <li>9118 Chesapeake Ave, North Beach, MD 20714</li>
+          <br>
+          <b><li>Business Hours</li></b>
+            <li>Open Daily 8:00 AM–5:00 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="text-center">
+      <p class="mt-10">&copy; <span id="copyright-year"></span> Cisney Painting and Power Washing. All rights reserved.</p>
+      <script>
+        const el = document.getElementById('copyright-year');
+        if (el) {
+          el.textContent = new Date().getFullYear().toString();
+        }      
+      </script>
+      <p>Website by <a href="https://www.amyateswebdesign.com" target="_blank" rel="noopener noreferrer">.am-yates Web Design</a></p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import robertoUgarte from "../assets/roberto-ugarte-about.jpg";
+
+const pageTitle = "About - Cisney Painting and Power Washing | Calvert County, MD";
+const metaDescription = "Since 2008, Cisney Painting and Power Washing has delivered expert residential and commercial services with a focus on quality, integrity, and customer care. Discover our story and what sets us apart."
+
+---
+
+<Layout pageTitle={pageTitle} metaDescription={metaDescription}>
+  <main class="mx-auto max-w-5xl px-4 py-10">
+    <h1 class="text-center">About Us</h1>
+  
+<Image
+  src={robertoUgarte}
+  alt="Roberto Ugarte"
+  class="block mx-auto mb-4 w-[90%] max-w-[280px] h-auto rounded sm:float-left sm:mr-4 sm:mt-5"
+/>
+
+    <h2>Our Story</h2>
+    <p>Cisney Painting and Power Washing has been transforming homes and businesses throughout the region since 2008. What began as a small local painting service has grown into a comprehensive painting and restoration company known for exceptional craftsmanship and attention to detail.</p>
+    <p>Roberto established Cisney Painting with a simple mission: to provide superior painting services with integrity, professionalism, and a personal touch. Today, that commitment remains at the heart of everything we do.</p>
+
+    <h2>Our Expertise</h2>
+    <p>With over 35 years of experience, our skilled team offers a full range of painting and surface preparation services, including interior and exterior painting, staining, drywall installation and replacement, wallpaper removal, and power washing.</p>
+
+    <h2>The Cisney Difference</h2>
+    <p>What sets us apart is our unwavering commitment to quality. We don't just paint surfaces—we transform spaces. Each project begins with thorough preparation, continues with premium materials and expert application, and concludes with a meticulous final inspection.</p>
+    <>Our team takes pride in their craftsmanship and treats every home or business with the utmost respect. We work cleanly, efficiently, and always strive to exceed expectations.</p>
+
+    <h2>Our Promise</h2>
+    <p>At Cisney Painting and Power Washing, we promise:</p>
+    <ul class="pl-4 mb-6 space-y-2">
+      <li class="flex items-start"><span class="mr-2">✔</span> Detailed, free estimates</li>
+      <li class="flex items-start"><span class="mr-2">✔</span> Premium materials and proven techniques</li>
+      <li class="flex items-start"><span class="mr-2">✔</span> Respectful, professional service</li>
+      <li class="flex items-start"><span class="mr-2">✔</span> Clear communication throughout your project</li>
+      <li class="flex items-start"><span class="mr-2">✔</span> Timely completion</li>
+      <li class="flex items-start"><span class="mr-2">✔</span> Results that stand the test of time</li>
+    </ul>
+
+    <p class="mb-4">Whether you're refreshing a single room, transforming your entire home, or maintaining your commercial property, Cisney Painting and Power Washing brings skill, experience, and dedication to every project.</p>
+    <p class="pb-5"><a href="/contact/">Contact us today</a> to experience the Cisney difference for yourself.</p>
+  </main>
+</Layout>

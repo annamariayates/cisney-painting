@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../.astro"
+		},
+		{
+			"path": "../../.vscode"
+		},
+		{
+			"path": "../../node_modules"
+		},
+		{
+			"path": "../../public"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": ".astro"
+	}
+}

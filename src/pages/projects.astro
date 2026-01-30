@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import exteriorPainting1 from "../assets/exterior-painting-1.jpg";
+import exteriorPainting2 from "../assets/exterior-painting-2.jpg";
+import exteriorPainting4 from "../assets/exterior-painting-4.jpg";
+import exteriorPainting5 from "../assets/exterior-painting-5.jpg";
+import exteriorPainting6 from "../assets/exterior-painting-6.jpg";
+import exteriorPainting7 from "../assets/exterior-painting-7.webp";
+import exteriorPainting8 from "../assets/exterior-painting-8.webp";
+import deckStaining from "../assets/deck-staining.jpg";
+import interiorPainting1 from "../assets/interior-painting-1.jpg";
+import interiorPainting2 from "../assets/interior-painting-2.jpg";
+import interiorPainting3 from "../assets/interior-painting-3.webp";
+import interiorPainting5 from "../assets/interior-painting-5.webp";
+
+const pageTitle = "Projects - Cisney Painting and Power Washing | Calvert County, MD"
+const metaDescription = "Browse our portfolio of completed painting and power washing projects, highlighting our attention to detail, quality workmanship, and satisfied clients. See how Cisney Painting and Power Washing brings spaces to life."
+
+---
+
+<Layout pageTitle={pageTitle} metaDescription={metaDescription}>
+<main role="main" aria-labelledby="projects-heading" class="text-center mx-auto max-w-6xl py-10">
+  <h1 class="mb-4">Projects</h1>
+  <p>Explore our recent projects showcasing our expertise in painting and power washing.</p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 mb-10">
+    <div class="overflow-hidden">
+      <Image src={exteriorPainting7} alt="Exterior Project 7" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={deckStaining} alt="Deck Staining" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={exteriorPainting4} alt="Exterior Project 4" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={exteriorPainting2} alt="Exterior Project 2" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={exteriorPainting1} alt="Exterior Project 1" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={exteriorPainting6} alt="Exterior Project 6" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={interiorPainting3} alt="Interior Project 3" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={interiorPainting1} alt="Interior Project 1" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={exteriorPainting5} alt="Exterior Project 5" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={interiorPainting5} alt="Interior Project 5" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={exteriorPainting8} alt="Exterior Project 8" class="w-full h-64 object-cover rounded" />
+    </div>
+    <div class="overflow-hidden">
+      <Image src={interiorPainting2} alt="Interior Project 2" class="w-full h-64 object-cover rounded" />
+    </div>
+  </div>
+</main>
+</Layout>

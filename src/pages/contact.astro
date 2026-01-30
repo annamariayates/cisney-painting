@@ -1,0 +1,232 @@
+---
+
+import '../styles/global.css';
+import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Contact - Cisney Painting and Power Washing | Calvert County, MD"
+const metaDescription = "Get in touch with Cisney Painting and Power Washing for expert service and personalized support. Whether you have questions, need a quote, or want to schedule a project, we're here to help."
+
+---
+
+<Layout pageTitle={pageTitle} metaDescription={metaDescription}>
+  <Fragment slot="head">
+   <script src="https://www.google.com/recaptcha/api.js?render=6LeTE6MrAAAAAJtXs4eMHCGVAxlHGwttKq7A_DgC" defer></script>
+<script>
+  window.grecaptcha.ready(() => {
+    window.grecaptcha.execute('6LeTE6MrAAAAAPSXKpJRFi1Zj7g4n0fTbjB7e9Aa', { action: 'submit' }).then((token) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'g-recaptcha-response';
+      input.value = token;
+      const form = document.querySelector('form');
+      if (form) {
+        form.appendChild(input);
+      }
+    });
+  });
+</script>
+  </Fragment>
+  <main role="main" aria-labelledby="contact-heading" class="w-full px-4 py-10">
+    <h1 class="mb-4 text-center">Contact</h1>
+    <p class="text-center">
+      Interested in a quote? Let's get in touch! Give us a call or send us an email through our form.
+    </p>
+
+    <section class="w-full py-5 overflow-x-hidden">
+       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8 px-4">
+
+        <!-- 📍 Google Maps Embed -->
+        <div class="w-full relative overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24907.41929457804!2d-76.532949!3d38.707995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b789f6d607b5af%3A0x2717bfdec4f4007!2sCISNEY%20PAINTING%20%26POWER%20WASHING!5e0!3m2!1sen!2sus!4v1752728950789!5m2!1sen!2sus"
+            class="w-full h-[300px] sm:h-[400px] lg:h-[500px] border-none z-[999]"
+            style="max-width: 100%;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Map showing location of Cisney Painting & Power Washing"
+          ></iframe>
+        </div>
+
+        <!-- 📝 Contact Form -->
+          <div class="w-full md:pr-4">
+            <form id="contact-form" role="form" aria-labelledby="contact-heading" class="w-full max-w-md mx-auto space-y-5 py-6" novalidate>
+              <!-- Name Field -->
+              <div>
+                <label for="name" class="block text-left font-medium mb-1">Name <span aria-hidden="true" class="text-red-600">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="box-border w-full px-3 py-2 border rounded text-base"
+                autocomplete="name"
+              />
+              </div>
+
+              <!-- Email Field -->
+              <div>
+                <label for="email" class="block text-left font-medium mb-1">Email<span aria-hidden="true" class="text-red-600">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="box-border w-full px-3 py-2 border rounded text-base"
+                  autocomplete="email"
+                />
+              </div>
+
+              <!-- Phone Field -->
+              <div>
+                <label for="phone" class="block text-left font-medium mb-1">Phone<span aria-hidden="true" class="text-red-600">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  class="box-border w-full px-3 py-2 border rounded text-base"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <!-- Preferred Contact Method -->
+              <div>
+                <label for="contact-method" class="block text-left font-medium mb-1">
+                  Preferred Contact Method <span aria-hidden="true" class="text-red-600">*</span>
+                </label>
+                <select
+                  id="contact-method"
+                  name="contact-method"
+                  class="box-border w-full px-3 py-2 border rounded text-base"
+                  required
+                >
+                  <option value="">Select a method</option>
+                  <option value="phone">Phone</option>
+                  <option value="email">Email</option>
+                </select>
+              </div>
+
+              <!-- Message Field -->
+              <div>
+                <label for="message" class="block text-left font-medium mb-1">
+                  Message / Project Details<span aria-hidden="true" class="text-red-600">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="box-border w-full px-3 py-2 border rounded text-base resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+              <button
+                type="submit"
+                aria-label="Send message"
+                class="btn box-border w-full px-3 py-2 font-semibold bg-orange rounded hover:bg-dark-orange transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange"
+              >
+                Send
+              </button>
+            </form>
+          <div class="w-full max-w-md mx-auto">
+            <div id="form-warning" class="hidden text-red-600 mt-2 font-medium"></div>
+            <div id="form-response" class="hidden text-green-700 mt-4 font-medium"></div>
+          </div>
+        </div>
+        </div>
+    </section>
+<script type="module">
+  const form = document.getElementById('contact-form');
+  const responseDiv = document.getElementById('form-response');
+  const warningDiv = document.getElementById('form-warning');
+
+  if (!form || !responseDiv || !warningDiv) {
+    console.error("Missing form elements");
+  } else {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = form.name?.value.trim();
+      const email = form.email?.value.trim();
+      const phone = form.phone?.value.trim();
+      const contactMethod = form['contact-method']?.value;
+      const message = form.message?.value.trim();
+
+      if (!name || !email || !phone || !message || !contactMethod) {
+        warningDiv.textContent = "Please fill in all required fields.";
+        warningDiv.classList.remove('hidden');
+        responseDiv.classList.add('hidden');
+        return;
+      }
+
+      warningDiv.classList.add('hidden');
+
+      window.grecaptcha.ready(() => {
+        window.grecaptcha.execute('6LeTE6MrAAAAAJtXs4eMHCGVAxlHGwttKq7A_DgC', { action: 'contact' })
+          .then(async (token) => {
+            const recaptchaInput = document.getElementById('g-recaptcha-response');
+            if (recaptchaInput && recaptchaInput instanceof HTMLInputElement) {
+              recaptchaInput.value = token;
+            }
+
+            const formData = {
+              name,
+              email,
+              phone,
+              contactMethod,
+              message,
+              'g-recaptcha-response': token
+            };
+
+            try {
+              const res = await fetch("https://9vt7itvjvd.execute-api.us-east-1.amazonaws.com/contact", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+              });
+
+              const text = await res.text();
+              let result;
+
+              try {
+                result = JSON.parse(text);
+              } catch (err) {
+                responseDiv.textContent = "Unexpected server response.";
+                responseDiv.classList.remove('hidden');
+                responseDiv.classList.add('text-red-600');
+                return;
+              }
+
+              if (res.ok) {
+                form.reset();
+                responseDiv.textContent = result.message || "Thank you for contacting us!";
+                responseDiv.classList.remove('hidden');
+                responseDiv.classList.remove('text-red-600');
+              } else {
+                responseDiv.textContent = result.error || "Something went wrong.";
+                responseDiv.classList.remove('hidden');
+                responseDiv.classList.add('text-red-600');
+              }
+            } catch (error) {
+              responseDiv.textContent = "Submission failed. Please try again.";
+              responseDiv.classList.remove('hidden');
+              responseDiv.classList.add('text-red-600');
+              console.error("Form submission error:", error);
+            }
+          })
+          .catch((err) => {
+            responseDiv.textContent = "reCAPTCHA failed. Please try again.";
+            responseDiv.classList.remove('hidden');
+            responseDiv.classList.add('text-red-600');
+            console.error("reCAPTCHA error:", err);
+          });
+      });
+    });
+  }
+</script>
+</main>
+</Layout>  

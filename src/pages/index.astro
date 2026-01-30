@@ -1,0 +1,137 @@
+---
+import '../styles/global.css';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import robertoUgarte from "../assets/roberto-ugarte.webp";
+import HomepageStyles from '../components/HomepageStyles.astro';
+
+const pageTitle = "Cisney Painting and Power Washing | Calvert County, MD";
+const metaDescription = "Transform your home or business with Cisney Painting and Power Washing. Serving Calvert County with expert painting and power washing services.";
+
+---
+
+<Layout pageTitle={pageTitle} metaDescription={metaDescription}>
+<HomepageStyles>
+<main role="main" aria-labelledby="homepage-heading">
+  <div class="hero flex items-center justify-center">
+    <div class="hero-text max-w-[100vw] w-full text-center px-6 sm:px-8 lg:px-0 py-10 sm:py-16">
+      <h1 class="text-white text-3xl sm:text-4xl md:text-5xl leading-tight mb-4">
+        Fresh Coat, Fresh Start
+      </h1>
+      <h2 class="italic text-white text-xl sm:text-2xl font-serif mb-4">
+        Transform your home or business today.
+      </h2>
+      <p class="text-white text-base sm:text-lg mb-2">
+        We are Calvert County's premier painting and powerwashing company.
+      </p>
+      <p class="text-white text-base sm:text-lg mb-6">
+        Together, let's improve your space.
+      </p>
+      <a href="/contact" class="inline-block w-full sm:w-auto sm:mb-8">
+        <button class="btn w-fit bg-orange text-dark-blue font-semibold rounded-md hover:bg-dark-orange transition duration-200">
+          Get a Quote
+        </button>
+      </a>
+    </div>
+  </div>
+</main>
+</HomepageStyles>
+
+<section class="pt-12 pb-12 px-4 overflow-x-hidden">
+  <div class="max-w-7xl mx-auto px-4 my-15">
+    <div class="grid justify-items-center grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-18 px-4">
+      <!-- Residential Painting -->
+    <div class="w-full lg:max-w-[20rem] md:max-w-[18rem] bg-white shadow-md hover:shadow-lg transition-shadow duration-200 rounded-lg p-6 text-center">
+      <img src="../assets/residential-painting-icon.svg" alt="Residential Painting" class="mx-auto w-20 h-20" />
+      <h3>Residential Painting</h3>
+      <p>
+        Transform your home with our expert residential painting services.
+        We use high-quality materials and techniques to ensure a flawless finish.
+      </p>
+    </div>
+
+      <!-- Commercial Painting -->
+      <div class="w-full lg:max-w-[20rem] md:max-w-[18rem] bg-white shadow-md hover:shadow-lg transition-shadow duration-200 rounded-lg p-6 text-center">
+        <img src="../assets/commercial-painting-icon.svg" alt="Commercial Painting" class="mx-auto w-20 h-20" />
+        <h3>Commercial Painting</h3>
+        <p>
+          Boost your business’s curb appeal with our expert painting services. We minimize disruption and deliver professional results.
+        </p>
+      </div>
+
+      <!-- Power Washing -->
+      <div class="w-full lg:max-w-[20rem] md:max-w-[18rem] bg-white shadow-md hover:shadow-lg transition-shadow duration-200 rounded-lg p-6 text-center">
+        <img src="../assets/power-washing-icon.svg" alt="Power Washing" class="mx-auto w-20 h-20" />
+        <h3>Power Washing</h3>
+        <p>
+          Revitalize your property's exterior with our power washing services.
+          Remove dirt, grime, and mildew for a fresh, clean look.
+        </p>
+      </div>
+
+    </div>
+    <div class="flex justify-center mt-8">
+      <a href="/services/">
+        <button class="btn btn-outline sm:w-auto">
+          See All Services
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- About Preview -->
+    
+<section class="bg-blue py-5 px-4 overflow-x-hidden flex items-center justify-center">
+  <div class="flex flex-col md:flex-row items-center justify-center w-full max-w-[58rem] gap-6 px-4">
+
+    <!-- Image -->
+    <div class="flex justify-center items-center w-full md:w-auto">
+      <Image
+        src={robertoUgarte}
+        alt="Roberto Ugarte"
+        class="w-full h-auto object-contain rounded"
+      />
+    </div>
+
+    <!-- Content Box -->
+    <div class="bg-white px-5 py-7 space-y-4 w-full rounded mb-3 md:mb-0">
+      <h2>Why Choose Us?</h2>
+      <p>At Cisney Painting and Power Washing, we are committed to providing top-notch services that exceed your expectations. Our team of skilled professionals is dedicated to delivering quality workmanship and exceptional customer service.
+      </p>
+      <p class="pb-6">
+        Our owner Roberto is a local resident of Calvert County and takes pride in serving his community. He believes in building lasting relationships with clients through trust and transparency.
+      </p>
+      <a href="/about/">
+        <button class="btn btn-alt sm:w-auto">Learn More</button>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-4">
+      <div class="text-center max-w-4xl mx-auto mb-8">
+        <h3>Customer Stories That Speak Volumes</h3>
+        <p>We take pride in our work and the satisfaction of our customers. Here are some testimonials from our happy clients:</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-white text-dark-blue rounded-lg shadow-md p-6 flex flex-col items-center w-full max-w-sm mx-auto">
+          <p class="italic mb-2 text-center">"I'll use again. Roberto and his team serves the Baltimore/DC area. He painted my condo that I was trying to sell. They did a great job and made it look sharp. Anyone who saw the finished product was amazed by the quality and speed at which it was completed. I couldn't be happier."</p>
+          <span class="font-semibold">– Casey J., Baltimore, MD</span>
+        </div>
+        <div class="bg-white text-dark-blue rounded-lg shadow-md p-6 flex flex-col items-center w-full max-w-sm mx-auto">
+          <p class="italic mb-2 text-center">"I contracted Roberto and his crew to paint the entire interiors of an 1810 Maryland Plantation Farm in Southern Maryland. Always working a complete workday, and totally focus in his work until the completion of the job !!  My hat off to a fine painter and professional !!!"</p>
+          <span class="font-semibold">– Thomas F., Friendship, MD</span>
+        </div>
+        <div class="bg-white text-dark-blue rounded-lg shadow-md p-6 flex flex-col items-center w-full max-w-sm mx-auto">
+          <p class="italic mb-2 text-center">"Roberto, the owner of Cisney Painting, is great to work with. He has good attention to detail and works quickly and cleanly. His prices are reasonable, too. I highly recommend him!"</p>
+          <span class="font-semibold">– Phyllis E., Dunkirk, MD</span>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</Layout>
