@@ -7,7 +7,7 @@ import Inspect from 'vite-plugin-inspect';
 export default defineConfig({
   output: 'static'
   site: 'https://annamariayates.github.io/cisney-painting',
-  base: '/cisney-painting-archive/', 
+  base: '/cisney-painting/', 
   integrations: [tailwind()],
   vite: {
     plugins: [Inspect()]
