@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 import Inspect from 'vite-plugin-inspect';
 
 export default defineConfig({
-  output: 'static'
+  output: 'static',
   site: 'https://annamariayates.github.io/cisney-painting',
   base: '/cisney-painting/', 
   integrations: [tailwind()],
