@@ -7,7 +7,7 @@ import robertoUgarte from "../assets/roberto-ugarte-about.jpg";
 
 const pageTitle = "About - Cisney Painting and Power Washing | Calvert County, MD";
 const metaDescription = "Since 2008, Cisney Painting and Power Washing has delivered expert residential and commercial services with a focus on quality, integrity, and customer care. Discover our story and what sets us apart."
-
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout pageTitle={pageTitle} metaDescription={metaDescription}>
@@ -43,6 +43,6 @@ const metaDescription = "Since 2008, Cisney Painting and Power Washing has deliv
     </ul>
 
     <p class="mb-4">Whether you're refreshing a single room, transforming your entire home, or maintaining your commercial property, Cisney Painting and Power Washing brings skill, experience, and dedication to every project.</p>
-    <p class="pb-5"><a href="/contact/">Contact us today</a> to experience the Cisney difference for yourself.</p>
+    <p class="pb-5"><a href={`${base}contact/`}>Contact us today</a> to experience the Cisney difference for yourself.</p>
   </main>
 </Layout>

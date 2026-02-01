@@ -7,7 +7,7 @@ import HomepageStyles from '../components/HomepageStyles.astro';
 
 const pageTitle = "Cisney Painting and Power Washing | Calvert County, MD";
 const metaDescription = "Transform your home or business with Cisney Painting and Power Washing. Serving Calvert County with expert painting and power washing services.";
-
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout pageTitle={pageTitle} metaDescription={metaDescription}>
@@ -27,7 +27,7 @@ const metaDescription = "Transform your home or business with Cisney Painting an
       <p class="text-white text-base sm:text-lg mb-6">
         Together, let's improve your space.
       </p>
-      <a href="/contact" class="inline-block w-full sm:w-auto sm:mb-8">
+      <a href={`${base}contact`} class="inline-block w-full sm:w-auto sm:mb-8">
         <button class="btn w-fit bg-orange text-dark-blue font-semibold rounded-md hover:bg-dark-orange transition duration-200">
           Get a Quote
         </button>
@@ -42,7 +42,7 @@ const metaDescription = "Transform your home or business with Cisney Painting an
     <div class="grid justify-items-center grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-18 px-4">
       <!-- Residential Painting -->
     <div class="w-full lg:max-w-[20rem] md:max-w-[18rem] bg-white shadow-md hover:shadow-lg transition-shadow duration-200 rounded-lg p-6 text-center">
-      <img src="../assets/residential-painting-icon.svg" alt="Residential Painting" class="mx-auto w-20 h-20" />
+      <img src={`${base}assets/residential-painting-icon.svg`} alt="Residential Painting" class="mx-auto w-20 h-20" />
       <h3>Residential Painting</h3>
       <p>
         Transform your home with our expert residential painting services.
@@ -52,7 +52,7 @@ const metaDescription = "Transform your home or business with Cisney Painting an
 
       <!-- Commercial Painting -->
       <div class="w-full lg:max-w-[20rem] md:max-w-[18rem] bg-white shadow-md hover:shadow-lg transition-shadow duration-200 rounded-lg p-6 text-center">
-        <img src="../assets/commercial-painting-icon.svg" alt="Commercial Painting" class="mx-auto w-20 h-20" />
+        <img src={`${base}assets/commercial-painting-icon.svg`} alt="Commercial Painting" class="mx-auto w-20 h-20" />
         <h3>Commercial Painting</h3>
         <p>
           Boost your business’s curb appeal with our expert painting services. We minimize disruption and deliver professional results.
@@ -61,7 +61,7 @@ const metaDescription = "Transform your home or business with Cisney Painting an
 
       <!-- Power Washing -->
       <div class="w-full lg:max-w-[20rem] md:max-w-[18rem] bg-white shadow-md hover:shadow-lg transition-shadow duration-200 rounded-lg p-6 text-center">
-        <img src="../assets/power-washing-icon.svg" alt="Power Washing" class="mx-auto w-20 h-20" />
+        <img src={`${base}assets/power-washing-icon.svg`} alt="Power Washing" class="mx-auto w-20 h-20" />
         <h3>Power Washing</h3>
         <p>
           Revitalize your property's exterior with our power washing services.
@@ -71,7 +71,7 @@ const metaDescription = "Transform your home or business with Cisney Painting an
 
     </div>
     <div class="flex justify-center mt-8">
-      <a href="/services/">
+      <a href={`${base}services/`}>
         <button class="btn btn-outline sm:w-auto">
           See All Services
         </button>
@@ -102,7 +102,7 @@ const metaDescription = "Transform your home or business with Cisney Painting an
       <p class="pb-6">
         Our owner Roberto is a local resident of Calvert County and takes pride in serving his community. He believes in building lasting relationships with clients through trust and transparency.
       </p>
-      <a href="/about/">
+      <a href={`${base}about/`}>
         <button class="btn btn-alt sm:w-auto">Learn More</button>
       </a>
     </div>

@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 
 const pageTitle = "Services - Cisney Painting and Power Washing | Calvert County, MD";
 const metaDescription = "Discover expert painting and power washing services tailored for homes and businesses. Quality, reliability, and lasting results since 2008."
-
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout pageTitle={pageTitle} metaDescription={metaDescription}>
@@ -82,6 +82,6 @@ const metaDescription = "Discover expert painting and power washing services tai
     </div>
 
     <p class="mb-4">All our services begin with a free, detailed consultation and estimate. We work with you to understand your vision, recommend the best products and approaches, and provide a clear timeline for completion.</p>
-    <p class="pb-5"><a href="/contact/">Contact</a> Cisney Painting and Power Washing today to discuss how we can bring new life to your home or business spaces.</p>
+    <p class="pb-5"><a href={`${base}contact/`}>Contact</a> Cisney Painting and Power Washing today to discuss how we can bring new life to your home or business spaces.</p>
   </main>
 </Layout>

@@ -1,9 +1,13 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <footer class="bg-gold pt-10 pb-4 text-charcoal text-sm">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
       <!-- About Section (Left aligned) -->
       <div class="text-left">
-        <a href="/privacy/" class="underline mb-4 block">Privacy Policy</a>
+        <a href={`${base}privacy/`} class="underline mb-4 block">Privacy Policy</a>
         <ul class="licenses-list space-y-1">
           <li>MHIC License #04223586</li>
           <li>Florida License #G19000122438</li>

@@ -2,49 +2,50 @@
 import '../styles/global.css'; // Import global styles
 import { ClientRouter } from "astro:transitions";
 const { currentPath } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <header class="bg-blue">
   <nav class="relative grid grid-cols-3 items-center px-4 py-3">
     <!-- Logo (Left Column) -->
     <div class="flex items-center justify-start">
-      <a href="/" class="flex-shrink-0">
-        <img src="/assets/cisney-logo.svg" alt="Cisney Painting and Power Washing Logo" width="150" />
+      <a href={base} class="flex-shrink-0">
+        <img src={`${base}assets/cisney-logo.svg`} alt="Cisney Painting and Power Washing Logo" width="150" />
       </a>
     </div>
 
     <!-- Navigation Links (Center Column) -->
   <div class="hidden lg:flex justify-center items-center gap-6 text-base md:text-lg">
   <a
-    href="/"
+    href={base}
     class={`pb-1 transition duration-200 ease-in-out ${currentPath === '/' ? 'border-b-2 border-dark-blue' : ''}`}
     aria-current={currentPath === '/' ? 'page' : undefined}
   >
     Home
   </a>
   <a
-    href="/about"
+    href={`${base}about`}
     class={`pb-1 transition duration-200 ease-in-out ${currentPath === '/about' ? 'border-b-2 border-dark-blue' : ''}`}
     aria-current={currentPath === '/about' ? 'page' : undefined}
   >
     About
   </a>
   <a
-    href="/services"
+    href={`${base}services`}
     class={`pb-1 transition duration-200 ease-in-out ${currentPath === '/services' ? 'border-b-2 border-dark-blue' : ''}`}
     aria-current={currentPath === '/services' ? 'page' : undefined}
   >
     Services
   </a>
   <a
-    href="/projects"
+    href={`${base}projects`}
     class={`pb-1 transition duration-200 ease-in-out ${currentPath === '/projects' ? 'border-b-2 border-dark-blue' : ''}`}
     aria-current={currentPath === '/projects' ? 'page' : undefined}
   >
     Projects
   </a>
   <a
-    href="/contact"
+    href={`${base}contact`}
     class={`pb-1 transition duration-200 ease-in-out ${currentPath === '/contact' ? 'border-b-2 border-dark-blue' : ''}`}
     aria-current={currentPath === '/contact' ? 'page' : undefined}
   >
@@ -56,10 +57,10 @@ const { currentPath } = Astro.props;
     <!-- Social Icons (Right Column for Desktop) -->
     <div class="hidden lg:flex justify-end items-center gap-3">
       <a href="https://maps.app.goo.gl/LhTCpMv5D61gKuYt7" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/google-my-business-icon.svg" alt="Google Business" width="30" />
+        <img src={`${base}assets/google-my-business-icon.svg`} alt="Google Business" width="30" />
       </a>
       <a href="https://www.yelp.com/biz/cisney-painting-and-power-washing-north-beach-2" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/yelp-icon.svg" alt="Yelp" width="20" />
+        <img src={`${base}assets/yelp-icon.svg`} alt="Yelp" width="20" />
       </a>
     </div>
 
@@ -79,16 +80,16 @@ const { currentPath } = Astro.props;
   </nav>
 
   <!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden flex-col items-center gap-4 px-4 py-6 text-base bg-blue text-white lg:hidden">    <a href="/about" class={`nav-link${Astro.url.pathname === '/about' ? ' active' : ''}`}>About</a>
-    <a href="/services" class={`nav-link${Astro.url.pathname === '/services' ? ' active' : ''}`}>Services</a>
-    <a href="/projects" class={`nav-link${Astro.url.pathname === '/projects' ? ' active' : ''}`}>Projects</a>
-    <a href="/contact" class={`nav-link${Astro.url.pathname === '/contact' ? ' active' : ''}`}>Contact</a>
+<div id="mobile-menu" class="hidden flex-col items-center gap-4 px-4 py-6 text-base bg-blue text-white lg:hidden">    <a href={`${base}about`} class={`nav-link${Astro.url.pathname === '/about' ? ' active' : ''}`}>About</a>
+    <a href={`${base}services`} class={`nav-link${Astro.url.pathname === '/services' ? ' active' : ''}`}>Services</a>
+    <a href={`${base}projects`} class={`nav-link${Astro.url.pathname === '/projects' ? ' active' : ''}`}>Projects</a>
+    <a href={`${base}contact`} class={`nav-link${Astro.url.pathname === '/contact' ? ' active' : ''}`}>Contact</a>
     <div class="flex gap-3 mt-2">
       <a href="https://maps.app.goo.gl/LhTCpMv5D61gKuYt7" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/google-my-business-icon.svg" alt="Google Business" width="30" />
+        <img src={`${base}assets/google-my-business-icon.svg`} alt="Google Business" width="30" />
       </a>
       <a href="https://www.yelp.com/biz/cisney-painting-and-power-washing-north-beach-2" target="_blank" rel="noopener noreferrer">
-        <img src="/assets/yelp-icon.svg" alt="Yelp" width="20" />
+        <img src={`${base}assets/yelp-icon.svg`} alt="Yelp" width="20" />
       </a>
     </div>
   </div>
